@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js'; // Make sure this is loaded!
-export default function About() {
+export default function About(hoho) {
   
   // useEffect(() => {
   //   // Optional: forcibly trigger Bootstrap reflow (not always needed but helpful)
@@ -10,65 +10,91 @@ export default function About() {
   //   });
   //   document.dispatchEvent(event);
   // }, []);
-  const [mystyle,setnewstyle]=useState({color:'white',
-    backgroundColor :'black'});
+
   const darkMode = () => {
   const btn = document.querySelector('.yesbro');
   if (btn.innerHTML==='Dark Mode') {
     btn.innerHTML = "Light Mode";
-    setnewstyle({color:'white',
+    hoho.setnewstyle({color:'white',
     backgroundColor :'black'});
   }
     else if(btn.innerHTML==='Light Mode'){
         btn.innerHTML = "Dark Mode";
-        setnewstyle({color:'black',
+        hoho.setnewstyle({color:'black',
     backgroundColor :'white'});
     }
   
 };
-const Copybro=()=>{
-  var text=document.getElementById("");
-};
+// const Copybro=()=>{
+//   var text=document.getElementById("");
+//   text.select();
+// };
 
 
   return (
     <>
-      <div className="container" style={mystyle} >
+      <div className="container" style={{...hoho.mystyle,height:'480px'}} >
         <h1 className="my-3">About Us</h1>
             <div className="accordion" id="accordionExample">
   <div className="accordion-item">
     <h2 className="accordion-header">
-      <button className="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" style={mystyle}>
-        Accordion Item #1
+      <button className="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" style={hoho.mystyle} >
+        About Our App
       </button>
     </h2>
     <div id="collapseOne" className="accordion-collapse collapse show" data-bs-parent="#accordionExample">
-      <div className="accordion-body">
-        <strong>This is the first item’s accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It’s also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+      <div className="accordion-body" style={{
+  padding: '25px',
+  fontSize: '1.1rem',
+  lineHeight: '1.6',
+}}>
+        <strong>Text Transformer App: Convert, Case & Speak!.</strong> <br/>Introducing Text Transformer, a powerful and easy-to-use web app that lets users instantly convert text into uppercase or lowercase and even speak the sentence out loud using speech synthesis. Whether you're editing documents, formatting input, or need a screen reader-like experience, this app brings accessibility and productivity together in one clean interface. Built with React and JavaScript, it's responsive, simple, and lightning-fast.
       </div>
     </div>
   </div>
   <div className="accordion-item">
     <h2 className="accordion-header">
-      <button className="accordion-button collapsed" style={mystyle} type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-        Accordion Item #2
+      <button className="accordion-button collapsed" style={hoho.mystyle} type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+        Key Advantages of Using the App
       </button>
     </h2>
     <div id="collapseTwo" className="accordion-collapse collapse" data-bs-parent="#accordionExample">
-      <div className="accordion-body">
-        <strong>This is the second item’s accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It’s also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+      <div className="accordion-body" style={{
+  padding: '25px',
+  fontSize: '1.1rem',
+  lineHeight: '1.6',
+}}>
+        <ol>
+          <li>User-Friendly Interface: Simple buttons to convert text to uppercase or lowercase in a single click.</li>
+          <li>Speech Feature: Uses the browser's built-in SpeechSynthesis API to speak out loud the entered text – useful for visually impaired users or multitaskers.</li>
+          <li>Real-Time Feedback: Instantly see your changes with live text updates and alerts.</li>
+          <li>Accessibility Support: Helps users with reading difficulties or dyslexia by offering voice support.</li>
+          <li>Cross-Platform: Works smoothly on mobile and desktop browsers without needing any installation.</li>
+        </ol>
       </div>
     </div>
   </div>
   <div className="accordion-item">
     <h2 className="accordion-header">
-      <button className="accordion-button collapsed" style={mystyle} type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-        Accordion Item #3
+      <button className="accordion-button collapsed" style={hoho.mystyle} type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+        Project Links & Author Info
       </button>
     </h2>
     <div id="collapseThree" className="accordion-collapse collapse" data-bs-parent="#accordionExample">
-      <div className="accordion-body">
-        <strong>This is the third item’s accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It’s also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+      <div className="accordion-body" style={{
+  padding: '25px',
+  fontSize: '1.1rem',
+  lineHeight: '1.6',
+}}>
+        <ul>
+          <li>
+            GitHub Repository: https://github.com/Prince161724/Word-App.git
+          </li>
+          <li>GitHub Profile: https://github.com/Prince161724e</li>
+          <li>
+            LinkedIn Profile: https://www.linkedin.com/in/princekumargiri/
+          </li>
+        </ul>
       </div>
     </div>
   </div>
@@ -76,7 +102,7 @@ const Copybro=()=>{
       </div>
       <div className="container">
         <button className="mt-5 ms-2 yesbro btn btn-dark" onClick={darkMode} type="button" >Dark Mode</button>
-        <button className="copyText btn btn-primary" style={{ position: 'relative', top: '26px' ,left:'25px',height:'35px' }} onClick={Copybro}>Copy Text</button>
+        {/* <button className="copyText btn btn-primary" style={{ position: 'relative', top: '26px' ,left:'25px',height:'35px' }} onClick={Copybro}>Copy Text</button> */}
     </div>
     </>
   );

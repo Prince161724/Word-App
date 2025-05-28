@@ -15,6 +15,8 @@ function App() {
   const [color,setColor]=useState('dark');
   const [alert,setalert]=useState("Nothing till yet");
   const [Theme,setTheme]=useState("white");
+  const [mystyle,setnewstyle]=useState({color:'white',
+    backgroundColor :'black'});
   const showAlert=(message,type)=>{
     setalert({
       msg:message,
@@ -28,15 +30,15 @@ function App() {
    <>
 {/* <Navbar title="NONONO" abouttext="aboulllllll"/> */}
 <BrowserRouter>
-<Navbar Home="Textutils" mode={DarkMode} setMode={setDarkMode} setColor={setColor} setalert={showAlert} setTheme={setTheme} Theme={Theme}/>
+<Navbar Home="Textutils" mode={DarkMode} setMode={setDarkMode} setColor={setColor} setalert={showAlert} setTheme={setTheme} Theme={Theme} setnewstyle={setnewstyle}/>
 <Alert Alert={alert}/>
 <div className="container">
    
             <Routes>
-          <Route path="/about" element={<About />} />
+          <Route path="/about" element={<About mystyle={mystyle} setnewstyle={setnewstyle} />} />
           
           < Route path="/"
-            element= {<Textform heading="Enter the text to analyse: " color={color} />} /> 
+            element= {<Textform heading="Enter the text to analyse: " color={color} setalert={showAlert}/>} /> 
           </Routes>
 {/* <About/> */}
 

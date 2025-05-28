@@ -2,9 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
-// import setDarkMode from './App.js';
-
-
 export default function Navbar(props) {
   const DarkMM=()=>{
     var coco=document.getElementById('Switch');
@@ -16,8 +13,9 @@ export default function Navbar(props) {
         coco.style.color = 'black';
         props.setalert("Light mode enabled","success");
         light();
-        console.log('light');
         props.setTheme('black');
+        props.setnewstyle({color:'white',
+        backgroundColor :'black'});
       }
       else if(props.mode==='light'){
         props.setMode('dark');
@@ -28,6 +26,8 @@ export default function Navbar(props) {
         coco.style.color = 'white';
         dark();
         props.setTheme('white');
+        props.setnewstyle({color:'white',
+        backgroundColor :'#042743'})
       }
   };
     const light = () => {
@@ -37,12 +37,23 @@ export default function Navbar(props) {
   }, 3000);
 };
 
+
 const dark = () => {
   document.title = 'Dark Mode bro';
   setTimeout(() => {
     document.title = 'Word App';
   }, 3000);
 };
+
+const colorChange=(color)=>{
+  // const currentBg = window.getComputedStyle(document.body).backgroundColor;
+  if(document.body.style.backgroundColor!='white'){
+    document.body.style.backgroundColor='white';
+  }
+  else{
+    document.body.style.backgroundColor=color;
+  }
+}
 
 
     return (
@@ -54,10 +65,10 @@ const dark = () => {
 
   <div className="collapse navbar-collapse" id="navbarSupportedContent">
     <ul className="navbar-nav mr-auto">
-      <li className="nav-item active">
-        <Link className="nav-link" to="/">Home <span className="sr-only">(current)</span></Link>
+      <li className="nav-item ">
+        <Link className="nav-link" to="/" >Home <span className="sr-only">(current)</span></Link>
       </li>
-      <li className="nav-item">
+      <li className="nav-item ">
         <Link className="nav-link" to="/about">About</Link>
       </li>
       {/* <li className="nav-item dropdown">
@@ -75,6 +86,13 @@ const dark = () => {
         <a className="nav-link disabled" href="/">Disabled</a>
       </li> */}
     </ul> 
+    <div className="d-flex">
+      <div className="bg-secondary rounded mx-2 grey" style={{height:'20px',width:'20px'}} onClick={()=>colorChange('#6c757d')}></div>
+      <div className="bg-success rounded mx-2 green" style={{height:'20px',width:'20px'}} onClick={()=>colorChange('#28a745')}></div>
+      <div className="bg-danger rounded mx-2 red" style={{height:'20px',width:'20px'}} onClick={()=>colorChange('#dc3545')}></div>
+      <div className="bg-warning rounded mx-2 yellow" style={{height:'20px',width:'20px'}} onClick={()=>colorChange('#ffc107')}></div>
+        <div className="bg-info rounded mx-2 blue" style={{height:'20px',width:'20px'}} onClick={()=>colorChange('#17a2b8')}></div>
+    </div>
     <div className="form-check form-switch">
   <input className="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" onClick={DarkMM}/>
   <label className="form-check-label" htmlFor="flexSwitchCheckDefault" id="Switch" style={{ color: props.Theme }}>Change Theme</label>
