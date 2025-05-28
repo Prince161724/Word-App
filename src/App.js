@@ -28,7 +28,6 @@ function App() {
   };
   return (
    <>
-{/* <Navbar title="NONONO" abouttext="aboulllllll"/> */}
 <BrowserRouter>
 <Navbar Home="Textutils" mode={DarkMode} setMode={setDarkMode} setColor={setColor} setalert={showAlert} setTheme={setTheme} Theme={Theme} setnewstyle={setnewstyle}/>
 <Alert Alert={alert}/>
@@ -40,8 +39,6 @@ function App() {
           < Route path="/"
             element= {<Textform heading="Enter the text to analyse: " color={color} setalert={showAlert}/>} /> 
           </Routes>
-{/* <About/> */}
-
 </div>
     </BrowserRouter>
    </>

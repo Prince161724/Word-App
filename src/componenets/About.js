@@ -1,16 +1,6 @@
 import React, { useState } from 'react';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js'; // Make sure this is loaded!
 export default function About(hoho) {
-  
-  // useEffect(() => {
-  //   // Optional: forcibly trigger Bootstrap reflow (not always needed but helpful)
-  //   const event = new Event('DOMContentLoaded', {
-  //     bubbles: true,
-  //     cancelable: true,
-  //   });
-  //   document.dispatchEvent(event);
-  // }, []);
-
   const darkMode = () => {
   const btn = document.querySelector('.yesbro');
   if (btn.innerHTML==='Dark Mode') {
@@ -25,12 +15,6 @@ export default function About(hoho) {
     }
   
 };
-// const Copybro=()=>{
-//   var text=document.getElementById("");
-//   text.select();
-// };
-
-
   return (
     <>
       <div className="container" style={{...hoho.mystyle,height:'480px'}} >
@@ -102,7 +86,6 @@ export default function About(hoho) {
       </div>
       <div className="container">
         <button className="mt-5 ms-2 yesbro btn btn-dark" onClick={darkMode} type="button" >Dark Mode</button>
-        {/* <button className="copyText btn btn-primary" style={{ position: 'relative', top: '26px' ,left:'25px',height:'35px' }} onClick={Copybro}>Copy Text</button> */}
     </div>
     </>
   );

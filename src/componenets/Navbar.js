@@ -46,7 +46,6 @@ const dark = () => {
 };
 
 const colorChange=(color)=>{
-  // const currentBg = window.getComputedStyle(document.body).backgroundColor;
   if(document.body.style.backgroundColor!='white'){
     document.body.style.backgroundColor='white';
   }
