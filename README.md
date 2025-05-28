@@ -14,7 +14,7 @@ Welcome to Word-App, a sleek and functional web application built with React tha
 5.📊 Live Preview – See how your formatted text looks in real-time.
 
 
-<strong>To Run This App</strong>
+To Run This App
 1.Clone the repository by using Visual code terminal
 Command:git clone https://github.com/Prince161724/Word-App.git
 2.Navigate to the project folder:
