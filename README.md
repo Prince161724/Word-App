@@ -1,75 +1,32 @@
-<<<<<<< HEAD
-# Getting Started with Create React App
+<strong>Word-App</strong>
+Welcome to Word-App, a sleek and functional web application built with React that helps you interact with text in a smarter way. Whether you're trying to count words, convert text to uppercase/lowercase, or simply clean up extra spaces, this app has you covered — all in real-time, with a responsive UI!
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+<strong>Features</strong>
+1.✅ Real-time Text Analysis – Get word and character counts instantly as you type.
 
-In the project directory, you can run:
+2.🔠 Text Case Conversion – Convert your text to UPPERCASE or lowercase with one click.
 
-### `npm start`
+3.🧹 Remove Extra Spaces – Clean messy text with intelligent space trimming.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+4.🌗 Light/Dark Mode – Toggle between light and dark themes based on your comfort.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+5.📊 Live Preview – See how your formatted text looks in real-time.
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<strong>To Run This App</strong>
+1.Clone the repository by using Visual code terminal
+Command:git clone https://github.com/Prince161724/Word-App.git
+2.Navigate to the project folder:
+Command:cd Word-App
+3.Navigate to the src folder to explore core files like App.js:
+Command:cd src
+4.Return to the root directory and install dependencies:
+Command:cd .. 
+5.After 4th step Run this command
+Command:npm install
+6.Start the development server:
+Command:npm start
 
-### `npm run build`
+Note: Ensure you have Node.js and npm installed on your system before running the project.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-=======
-# Word-App
-This App is used to do operations on sentences.
->>>>>>> 841ad091761c2ce14e04b1f7513a2aada2186be6
