@@ -16,26 +16,34 @@ Welcome to **Word-App**, a sleek and functional web application built with **Rea
 
 ## 🚀 How to Run This App
 
-Follow these steps to run the application locally on your machine:
+Follow these steps to run the application locally on your machine:  
+1.**Clone the repository**  
+   command:  
+   git clone https://github.com/Prince161724/Word-App.git  
+2.Navigate to the project folder   
+  command:  
+  cd Word-App  
+3. Navigate to the src folder to explore the core files like App.js  
+   command:  
+   cd src   
+4.Return to the root directory  
+  command:  
+  cd ..  
+5.Install the dependencies  
+  command:  
+  npm install  
+6.Start the development server  
+  command:  
+  npm start  
+  
 
-1. **Clone the repository**
-   command:
-   git clone https://github.com/Prince161724/Word-App.git
-2. Navigate to the project folder
-   command:
-   cd Word-App
-3. Navigate to the src folder to explore the core files like App.js
-   command:
-   cd src
-4.Return to the root directory
-  command:
-  cd ..
-5.Install the dependencies
-  command:
-  npm install
-6.Start the development server
-  command:
-  npm start
+
+
+  
+  
+
+  
+
 
  
   
